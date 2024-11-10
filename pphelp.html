@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VK Media Help Screen</title>
+    <link rel="stylesheet" href="pphelp.css">
+    <script src = "pphelp.js"></script>
+    <script src="https://kit.fontawesome.com/fa38437b72.js" crossorigin="anonymous"></script>
+</head>
+<header class = "header">
+    <a href="pp.html" class = "logo">Partner Portal</a>
+
+    <div class = "bx bx-menu" id="menu-icon"></div>
+
+    <nav class = "navbar">
+        <a href="pp.html">Home</a>
+        <a href="pp.html#about">About</a>
+        <a href="ppsearch.html">Search</a>
+        <a href="ppcontact.html" class = "active">Help</a>
+        <a href="pplogin.html">Login</a>
+    </nav>
+</header>
+<body>
+    <section class="about" id="about">
+        <h2 class="heading">Common <span>Questions</span></h2>
+        <div class="about-content">
+            <p>What is Partner Portal?</p>
+            <li>Partner Portal is a site that allows you to search and find the perfect partners for you. Learn more by going to the "About" page on.</li>
+                        
+            <p>How do you use Partner Portal?</p>
+            <li>Login or create an account to use the site's features. Then, go to the "Search" page to find partners.</li>
+            
+            <p>What are the partner cards not loading?</p>
+            <li>Try refreshing the page or logging out and signing back in to fix the issue. Please contact us if you have any other problems.</li>
+
+            <div class="btn-box">
+                <a href="#contact">Contact Us</a>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id = "contact">
+        <div class="container" id="container">
+            <form>
+                <div class="row">
+                    <div class="input-group">
+                        <input type="text" id="name" required oninvalid="this.setCustomValidity('Please enter your name.')">
+                        <label for="name"><i class="fa-solid fa-user"></i> Your Name</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="number" required oninvalid="this.setCustomValidity('Please enter your phone number.')">
+                        <label for="number"><i class="fa-solid fa-phone"></i> Phone No.</label>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="email" required oninvalid="this.setCustomValidity('Please enter your email.')">
+                    <label for="email"><i class="fa-solid fa-envelope"></i> Email Address</label>
+                </div>
+                <div class="input-group">
+                    <textarea id="message" rows="8" style="resize: none" required></textarea>
+                    <label for="message"><i class="fa-solid fa-message"></i> Your Message</label>
+                </div>
+                <button class="btn-box" type="submit">Submit</button>
+            </form>
+            
+        </div>
+    </section>
+</body>
+</html>

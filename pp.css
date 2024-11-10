@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif; 
+}
+
+:root {
+    --bg-color: #081b29;
+    --second-bg-color: #112e42;
+    --text-color: #ededed;
+    --main-color: #00abf0;
+    
+}
+
+html {
+    font-size: 62.5%;
+    max-height: 100vh;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.logo:hover {
+    color: var(--main-color);
+    transition: 0.3s;
+}
+
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 3.5rem;
+    transition: 0.3s;
+
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    cursor: pointer;
+    display: none;
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 9%;
+    background-size: cover;
+    background-position: center;
+    z-index: r;
+}
+
+.home-content {
+    max-width: 2000px;
+}
+
+.home-content .text-animate {
+    position: relative;
+    width: 120.8rem;
+    white-space: nowrap;
+}
+
+.home-content h1 {
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.home-content h3 {
+    font-size: 192px;
+    font-weight: 700;
+    color: var(--main-color); 
+}
+
+.home-content .text-animate h3 {
+    font-size: 12.2rem;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: .7px var(--main-color);
+}
+
+.home-content p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+
+.home-content .btn-box {
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: var(--main-color);
+    border: 2px solid var(--main-color);
+    border-radius: 8px;
+    font-size: 19px;
+    color: var(--bg-color);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.btn-box a:hover {
+    color: var(--main-color);
+}
+
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: var(--main-color);
+}
+
+.btn-box a:nth-child(2):hover {
+    background: transparent;
+    color: var(--bg-color);
+}
+
+.btn-box a:nth-child(2)::before {
+    background: var(--main-color);
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+.home-sci {
+    content: '';
+}
+
+.about {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background: var(--second-bg-color);
+    padding-bottom: 6rem;
+}
+
+.heading {
+    font-size: 5rem;
+    margin-top: 5rem;
+    text-align: center;
+    margin-bottom: 0rem;
+}
+
+span {
+    color: var(--main-color);
+}
+
+.about-img {
+    position: relative;
+    width: 25rem; /* Increase the width of the container */
+    height: 25rem; /* Increase the height of the container */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Set positioning to move the image to the right */
+    top: 0%; /* Position from the vertical center */
+    left: 0%; /* Move to the right side of the screen */
+}
+
+.about-img img {
+    width: 100%; /* Ensure the image takes up the entire container */
+    height: 100%; /* Ensure the image takes up the entire container */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 50%; /* Create a circular border */
+    border: 0.2rem solid var(--main-color); /* Border style */
+}
+
+.about-img .circle-spin {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-top: 0.2rem solid var(--second-bg-color);
+    border-bottom: 0.2rem solid var(--second-bg-color);
+    border-left: 0.2rem solid var(--main-color);
+    border-right: 0.2rem solid var(--main-color);
+    animation: spin 8s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0); }
+    100% { transform: rotate(360deg); }
+}
+
+.about-content {
+    text-align: center;
+}
+
+.about-content h3 {
+    font-size: 2.6rem;
+}
+
+.about-content p {
+    font-size: 1.6rem;
+    margin: 4rem 35rem;
+    text-align: left;
+}
+
+.btn-box.btns {
+    display: inline-block;
+    width: 15rem;
+    height: 50px;
+}
+
+.btn-box.btns a::before {
+    background: var(--second-bg-color)
+}
+
+body::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: #2b394d; /* Background of the scrollbar track */
+    border-radius: 10px; /* Optional: rounded corners */
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #b8b8b8; /* Color of the scrollbar thumb */
+    border-radius: 0px; /* Optional: rounded corners */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #ffffff; /* Color of the scrollbar thumb on hover */
+}
+
+/* Pop up */
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    margin: 20px;
+}
+
+.modal-content {
+    position: fixed;
+    top: 25%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 40px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 1100px; 
+    border-radius: 10px;
+    text-align: left;
+    color: #081b29;
+    font-size: 30px;
+    line-height: 70px;
+    overflow: hidden;
+}
+
+.modal-content h2 {
+    text-align: center;
+}
+
+.modal-content p {
+    text-align: center;
+    color: var(--main-color);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--main-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Styles for the modal */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: hidden; 
+    background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 40px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 1200px; 
+    border-radius: 8px;
+}

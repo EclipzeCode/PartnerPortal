@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif; 
+}
+
+:root {
+    --bg-color: #081b29;
+    --second-bg-color: #112e42;
+    --text-color: #ededed;
+    --main-color: #00abf0;
+}
+
+html {
+    font-size: 62.5%;
+    max-height: 100vh;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.about {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background: var(--second-bg-color);
+    padding-bottom: 6rem;
+}
+
+.heading {
+    font-size: 5rem;
+    margin-top: 5rem;
+    text-align: center;
+    margin-bottom: 0rem;
+}
+
+span {
+    color: var(--main-color);
+}
+
+.about-content {
+    background-color: #005c80;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+    width: 72vw;
+    height: 50vw;
+    max-width: 980px;
+    max-height: 680px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content p {
+    font-size: 2.6rem;
+    margin: 4rem 35rem;
+    text-align: left;
+    white-space: nowrap;
+    color: var(--main-color);
+}
+
+.about-content li {
+    font-size: 1.2rem;
+    margin: 1rem 35rem;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.btn-box.btns {
+    display: inline-block;
+    width: 15rem;
+    height: 50px;
+}
+
+.about-content .btn-box {
+    margin-top: 24px;
+}
+
+.btn-box.btns a::before {
+    background: var(--second-bg-color)
+}
+
+body::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: #2b394d; /* Background of the scrollbar track */
+    border-radius: 10px; /* Optional: rounded corners */
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #b8b8b8; /* Color of the scrollbar thumb */
+    border-radius: 0px; /* Optional: rounded corners */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #ffffff; /* Color of the scrollbar thumb on hover */
+}
+
+button {
+    margin: inherit;
+    padding: inherit;
+    border: inherit;
+    background: inherit;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media only screen and (max-width: 600px) {
+    .customHeader {
+        width: 100%
+    }
+}
+
+article {
+    width: clamp(200px, 50%, 600px);
+}
+
+.contact {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.logo:hover {
+    color: #00abf0;
+    transition: 0.3s;
+}
+
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 3.5rem;
+    transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #00abf0;
+}
+
+.container {
+    background-color: #005c80;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+    width: 72vw;
+    height: 50vw;
+    max-width: 980px;
+    max-height: 680px;
+    padding: 20px; /* Add padding for inner spacing */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 90%;
+    max-width: 600px;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.container .input-group {
+    margin-bottom: 60px;
+    position: relative;
+    border-radius: 8px;
+    background-color: #eee
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border-radius: 8px;
+    color: var(--bg-color);
+    background: transparent;
+    font-size: 15px;
+}
+
+.container label {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    height: 100%;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--main-color);
+    cursor: text;
+    transition: 0.2s;
+}
+
+input:focus~label,
+input:valid~label {
+    top: -10px;  /* Adjusted top position for input fields */
+    font-size: 14px;
+}
+
+textarea:focus~label,
+textarea:valid~label {
+    top: 72px;  /* Adjusted top position for textarea */
+    font-size: 14px;
+}
+
+.container .btn-box {
+    padding: 0; /* Remove padding to avoid misalignment */
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 40px; /* Set a fixed height */
+    background: #dddddd;
+    border: 2px solid #dddddd;
+    border-radius: 8px;
+    font-size: 14px;
+    color: var(--bg-color);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.container .btn-box:hover {
+    color: #ededed;
+}
+
+.container .btn-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.container .btn-box:hover::before {
+    width: 100%;
+}
+
+.container .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .row .input-group {
+    flex-basis: 48%;
+}
+
+.container h1 {
+    font-size: 2.5em;
+}
+
+.container p {
+    font-size: 1.2em;
+}
+
+section {
+    text-align: center;
+    padding: 0px;
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 40px;
+    background: var(--main-color);
+    border: 2px solid var(--main-color);
+    border-radius: 8px;
+    font-size: 19px;
+    color: var(--bg-color);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.btn-box a:hover {
+    color: var(--main-color);
+}
+
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: var(--main-color);
+}
+
+.btn-box a:nth-child(2):hover {
+    background: transparent;
+    color: var(--bg-color);
+}
+
+.btn-box a:nth-child(2)::before {
+    background: var(--main-color);
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}

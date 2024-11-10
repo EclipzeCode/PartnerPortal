@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partner Portal Services</title>
+    <link rel="stylesheet" href="ppsearch.css">
+    <!-- Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <a href="pp.html" class="logo1">Partner Portal</a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <nav class="navbar1">
+            <a href="pp.html">Home</a>
+            <a href="pp.html#about">About</a>
+            <a href="ppsearch.html" class="active">Search</a>
+            <a href="pphelp.html">Help</a>
+            <a href="pplogin.html">Login</a>
+        </nav>
+    </header>
+
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <!--<img src="logo.png" alt="">-->
+                </span>
+                <div class="text logo-text">
+                    <span class="name">Partner Portal</span>
+                    <span class="user"></span>
+                </div>
+            </div>
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search..." id="searchInput">
+                </li>
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <btn type = "Button" id = "add-btn">
+                            <i class='bx bx-user-plus icon' ></i>
+                            <span class="text nav-text">Add a Partner</span>
+                        </btn>
+                    </li>
+                    <li class="nav-link">
+                        <btn type = "Button" id = "remove-btn">
+                            <i class='bx bx-user-minus icon'></i>
+                            <span class="text nav-text">Remove a Partner</span>
+                        </btn>
+                    </li>
+                    <li class="nav-link">
+                        <btn type = "Button" id = "filter-btn">
+                            <i class='bx bx-filter icon' ></i>
+                            <span class="text nav-text">Filter</span>
+                        </btn>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom-content">
+                <li class="">
+                    <btn type = "Button" id = "logout">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span>
+                    </btn>
+                </li>
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>      
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="wrapper">
+            <div class="wrapper2">
+                <section class="hero">
+        
+                </section>
+            </div>
+            <section class="featured-partners">
+                <h2>Featured Partners</h2>
+                <div class = "partners-container">
+                    <div class="partners-wrapper">
+                        <div class="partners-list">
+                            <!-- Partner cards will be injected here by JavaScript -->
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="navigation">
+                    <button id="prevBtn" class="nav-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="14" width="12.25" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+                    </button>
+                    <span id="pageIndicator">Page 1 of ...</span>
+                    <button id="nextBtn" class="nav-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="14" width="12.25" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+                    </button>
+                </div>
+                <!-- Modal for adding a partner -->
+                <div id="addPartnerModal" class="addModal">
+                    <div class="modal-content">
+                        <span class="closeicon">&times;</span>
+                        <h2>Add Partner</h2>
+                        <form id="addPartnerForm">
+                            <label for="name">Name</label>
+                            <input type="text" id="addName" required>
+                            <label for="type">Type</label>
+                            <input type="text" id="addType" required>
+                            <label for="expertise">Expertise</label>
+                            <input type="text" id="addExpertise" required>
+                            <label for="resources">Resources</label>
+                            <input type="text" id="addResources" required>
+                            <label for="email">Email</label>
+                            <input type="email" id="addEmail" required>
+                            <label for="phone">Phone Number</label>
+                            <input type="text" id="addPhone" required>
+                            <label for="location">Location</label>
+                            <input type="text" id="addLocation" required>
+                            <label for="bio">Description</label>
+                            <textarea id="addBio" required></textarea>
+                            <button type="submit" class = "btn-box" >Add Partner</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Modal for removing a partner -->
+                <div id="removePartnerModal" class="modal">
+                    <div class="modal-content">
+                        <span class="closeicon">&times;</span>
+                        <h2>Remove Partner</h2>
+                        <form id="removePartnerForm">
+                            <label for="removeName">Partner Name</label>
+                            <input type="text" id="removeName" required>
+                            <button type="submit" class = "btn-box" >Remove Partner</button>
+                        </form>
+                    </div>
+                </div>
+                <div id="filter-modal">
+                    <div class="modal-content">
+                        <btn class="closeicon">&times;</btn>
+                        <h2>Filter Partners</h2>
+                        <form id="filter-form" class = "filter-form">
+                            <label for="category">Organization Type</label>
+                            <input type="text" id="typeInput" name="typeInput" placeholder="Enter type">
+    
+                            <label for="location">Location</label>
+                            <input type="text" id="location" name="location" placeholder="Enter location">
+    
+                            <label for="resources">Resources</label>
+                            <input type="text" id="resources" name="resources" placeholder="Enter resources">
+    
+                            <button type="submit" id="apply-filter-btn" class = "btn-box" >Apply Filter</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="ppsearch.js"></script>
+</body>
+</html>

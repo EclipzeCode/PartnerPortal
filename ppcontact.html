@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VK Media Help Screen</title>
+    <link rel="stylesheet" href="pphelp.css">
+    <script src = "pphelp.js"></script>
+    <script src="https://kit.fontawesome.com/fa38437b72.js" crossorigin="anonymous"></script>
+</head>
+<header class = "header">
+    <a href="pp.html" class = "logo">Partner Portal</a>
+
+    <div class = "bx bx-menu" id="menu-icon"></div>
+
+    <nav class = "navbar">
+        <a href="pp.html">Home</a>
+        <a href="pp.html#about">About</a>
+        <a href="ppsearch.html">Search</a>
+        <a href="pphelp.html" class = "active">Help</a>
+        <a href="pplogin.html">Login</a>
+    </nav>
+</header>
+<body>
+    <div class="main">
+        <div class="container" id="container">
+            <form>
+                <div class="row">
+                    <div class="input-group">
+                        <input type="text" id="name" required oninvalid="this.setCustomValidity('Please enter your name.')">
+                        <label for="name"><i class="fa-solid fa-user"></i> Your Name</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="number" required oninvalid="this.setCustomValidity('Please enter your phone number.')">
+                        <label for="number"><i class="fa-solid fa-phone"></i> Phone No.</label>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="email" required oninvalid="this.setCustomValidity('Please enter your email.')">
+                    <label for="email"><i class="fa-solid fa-envelope"></i> Email Address</label>
+                </div>
+                <div class="input-group">
+                    <textarea id="message" rows="8" style="resize: none" required></textarea>
+                    <label for="message"><i class="fa-solid fa-message"></i> Your Message</label>
+                </div>
+            </form>
+            <button class="btn-box" type="submit">Submit</button>
+        </div>
+    </div>
+</body>
+
+
+
+
+        
+
+</html>

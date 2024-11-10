@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="pplogin.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Partner Portal - Login</title>
+    <script defer src="pplogin.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <a href="pp.html" class="logo">Partner Portal</a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <nav class="navbar">
+            <a href="pp.html">Home</a>
+            <a href="pp.html#about">About</a>
+            <a href="ppsearch.html">Search</a>
+            <a href="pphelp.html">Help</a>
+            <a href="pplogin.html" class="active">Login</a>
+        </nav>
+    </header>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form>
+                <h1>Create Account</h1>
+                <span>or use your email for registration</span>
+                <input type="text" id="register-name" placeholder="Name">
+                <input type="email" id="register-email" placeholder="Email">
+                <input type="password" id="register-password" placeholder="Password">
+                <button type="submit" id="register-btn" class="btn-box">Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form>
+                <h1>Sign In</h1>
+                <span>or use your email account</span>
+                <input type="email" id="login-email" placeholder="Email">
+                <input type="password" id="login-password" placeholder="Password">
+                <button type="submit" id="login-btn" class="btn-box">Sign In</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Welcome Back!</h1>
+                    <p>Enter your personal details to use all of the site's features</p>
+                    <button class="hidden" id="register">Sign In</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Register with your personal details to use all of the site's features</p>
+                    <button class="hidden" id="login">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

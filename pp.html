@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv = "X-UA-Compatiable" content = "IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partner Portal</title>
+    <link rel="stylesheet" href="pp.css">
+    <!-- Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    
+    <header class = "header">
+        <a href="#home" class = "logo">Partner Portal</a>
+        <div class = "bx bx-menu" id="menu-icon"></div>
+        <nav class = "navbar">
+            <a href="#home" class = "active">Home</a>
+            <a href="#about">About</a>
+            <a href="ppsearch.html">Search</a>
+            <a href="pphelp.html">Help</a>
+            <a href="pplogin.html">Login</a>
+        </nav>
+    </header>
+
+    <section class = "home" id = "home">
+        <div class="home-content">
+            <h1>Hi, welcome</h1>
+            <div class = "text-animate">
+                <h3>Search for a partner</h3>
+            </div>
+            <div class="btn-box">
+                <a href="ppsearch.html">Get Started</a>
+                <a href="#about">Learn More</a>
+            </div>
+            
+        </div>
+        <div class = "home-sci">
+            <a href = "#"></a>
+        </div>
+    </section>
+
+    <!-- About Section Design -->
+
+    <section class="about" id="about">
+        <h2 class="heading">Partner <span>Portal</span></h2>
+        <div class="about-img">
+            <img src="images/goku.png" alt="Goku character from Dragon Ball">
+            <span class="circle-spin"></span>
+        </div>
+        <div class="about-content">
+            <p>Welcome to Partner Portal, the Business and Community Partners Database for the Career and Technical Education (CTE) Department.</p>
+
+            <p>Partner Portal allows you to record detailed information about potential clients, including their organization type, available resources, and direct contact details. Explore and connect with these partners to leverage industry connections, secure internships, and access project resources that enrich educational experiences.</p>
+
+            <p>Use our search and filter tools to quickly locate specific partners based on organization type or available resources. This database facilitates collaboration between academia and industry, strengthening students' career readiness.</p>
+
+            <p>Discover a dedicated network of supporters committed to preparing students for success in the workforce. We extend our gratitude to all partners for their ongoing contribution to advancing career-focused education.</p>
+
+            <div class="btn-box btns">
+                <a type = "btn" class = "btn" id = "instructions-btn">Instructions</a>
+            </div>
+        </div>
+    </section>
+
+    <div id="instructions-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Instructions</h2>
+            <p>Welcome to the Partner Portal! Here are the steps to get started:</p>
+            <ol>
+                <li>First sign up or log in to access site features.</li>
+                <li>Navigate through the sections using the navigation bar at the top.</li>
+                <li>To search for a partner, click on the "Get Started" button on the home page or click on "Services" on the naviagion bar.</li>
+                <li>Click on the small arrow to expand the sidebar in the services page to search and filter partners.</li>
+                <li>Contact us through the "Help" page if you have any queries.</li>
+            </ol>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script src = "pp.js"></script>
+
+</body>
+</html>
