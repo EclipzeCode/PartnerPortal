@@ -8,10 +8,10 @@ CORS(app)  # Enable CORS for all routes
 
 # MySQL Connection
 db_config = {
-    "host": "localhost",
-    "user": "root",
-    "password": "inbAvo4uUFLKyPu!",
-    "database": "partnerportaldb",
+    "host": "",
+    "user": "",
+    "password": "",
+    "database": "",
 }
 
 def fetch_partners_from_db(filters=None):
